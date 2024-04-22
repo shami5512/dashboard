@@ -1,12 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Position;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Pagination\Paginator;
 use App\Models\Traccars;
+use Illuminate\Support\Facades\Cache;
+
 class DeviceController extends Controller
 {
     public function index(Request $request)
